@@ -24,7 +24,8 @@ function controlLed(state) {
 }
 
 
-function tableLed(state) {
+function table_led(state) {
+  // LED kontrolü için AJAX isteği gönderen fonksiyon
   fetch(`/table/${state}`)
     .then((response) => response.json())
     .then((data) => {

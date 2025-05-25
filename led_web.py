@@ -9,6 +9,7 @@ app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
 # LED için kullanılacak GPIO pini (18 numaralı pin)
 LED_PIN = 21
+LED_PIN2 = 18
 
 # LED pinini çıkış (output) olarak yapılandır
 GPIO.setup(LED_PIN, GPIO.OUT)

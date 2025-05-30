@@ -1,4 +1,3 @@
-Elbette! Aşağıda, Mustafa-Oztrk/Python_Web_Home GitHub reposuna uygun örnek bir README.md dosyası yer alıyor. Bu dosya, projenin amacı, nasıl kurulacağı ve nasıl kullanılacağı gibi temel bilgileri içerecek şekilde yazılmıştır:
 
 
 ---

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Home</title>
+  <link rel="icon" href="../templates/icon.jpg">
+  <link rel="stylesheet" href="../static/style.css" />
+</head>
+
+<body>
+  <div class="main">
+    <div class="header">
+      <h1>Welcome Home</h1>
+    </div>
+
+    <div class="container">
+      <div class="led-controller controller-box">
+        <div class="title-box">
+          <h2>LED Control</h2>
+        </div>
+        <div class="button-box">
+          <button class="on" onclick="controlLed('on')">On</button>
+          <button class="off" onclick="controlLed('off')">Off</button>
+        </div>
+      </div>
+
+      <div class="controller-box">
+        <div class="title-box">
+          <h2>Table LED Control</h2>
+        </div>
+        <div class="button-box">
+          <button class="on" onclick="table_led('on')">On</button>
+          <button class="off" onclick="table_led('off')">Off</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+  </div>
+  <script src="../static/app.js"></script>
+</body>
+
+</html>

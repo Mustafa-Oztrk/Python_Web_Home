@@ -1,9 +1,16 @@
 # Flask ve RPi.GPIO kütüphanelerini içe aktar
 from flask import Flask, render_template, jsonify
 import RPi.GPIO as GPIO
+import http.server
+import socketserver
 
+                
 # Flask uygulamasını oluştur
 app = Flask(__name__)
+
+HOST ="192.168.0.155"
+PORT = 2003
+
 
 # GPIO pinlerini BCM modunda ayarla (Raspberry Pi pin numaralandırması)
 GPIO.setmode(GPIO.BCM)
@@ -52,4 +59,4 @@ def tableLedController(state):
 # Programın ana bloğu: Flask sunucusunu başlat
 if __name__ == '__main__':
     # Sunucuyu tüm IP adreslerinden erişilebilir yap (0.0.0.0) ve 5000 portunda çalıştır
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host=HOST, port=PORT)

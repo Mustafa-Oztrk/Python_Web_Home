@@ -60,8 +60,3 @@ Katkıda bulunmak isterseniz lütfen bir fork oluşturup pull request gönderin.
 Lisans
 
 Bu proje MIT lisansı ile lisanslanmıştır.
-
----
-
-Dilersen bu yapıya ek olarak görseller, örnek cihazlar veya canlı demo linki gibi öğeler de ekleyebilirim. README'yi doğrudan repoya eklemek istersen sana bir `README.md` dosyası halinde hazırlayıp da verebilirim. İstersen?
-

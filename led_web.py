@@ -17,10 +17,12 @@ GPIO.setmode(GPIO.BCM)
 # LED için kullanılacak GPIO pini (18 numaralı pin)
 LED_PIN = 21
 LED_PIN2 = 20
+LED_PIN3 = 22
 
 # LED pinini çıkış (output) olarak yapılandır
 GPIO.setup(LED_PIN, GPIO.OUT)
 GPIO.setup(LED_PIN2, GPIO.OUT)
+GPIO.setup(LED_PIN3, GPIO.OUT)
 
 # Ana sayfa için rota tanımla ("/" adresine gelen istekler)
 @app.route('/')
@@ -55,6 +57,18 @@ def tableLedController(state):
         GPIO.output(LED_PIN2, GPIO.LOW)
         return jsonify({'message': 'Table LED SÖNDÜ'})
     return jsonify({'message': 'Geçersiz komut'}), 400
+
+@app.route('/speaker/<state>')
+def speakerController(state):
+    if state == 'on':
+        GPIO.output(LED_PIN3, GPIO.HIGH)
+        return jsonify({'message' : 'Hoperlörler Açıldı'})
+    elif state == 'off':
+        GPIO.output(LED_PIN3, GPIO.LOW)
+        return jsonify({'message' :'Hoperlörler Kapatıldı'})
+    return jsonify({'message' : 'Geçersiz Komut'})
+
+
 
 # Programın ana bloğu: Flask sunucusunu başlat
 if __name__ == '__main__':

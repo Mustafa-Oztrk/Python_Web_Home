@@ -14,27 +14,47 @@
     <div class="header">
       <h1>Welcome Home</h1>
     </div>
-
     <div class="container">
+      <!-- LED Control -->
       <div class="led-controller controller-box">
         <div class="title-box">
           <h2>LED Control</h2>
         </div>
-        <div class="button-box">
-          <button class="on" onclick="controlLed('on')">On</button>
-          <button class="off" onclick="controlLed('off')">Off</button>
+        <div class="switch-box">
+          <label class="switch">
+            <input type="checkbox" onchange="controlLed(this.checked ? 'on' : 'off')">
+            <span class="slider"></span>
+          </label>
         </div>
       </div>
 
+      <!-- Table LED Control -->
       <div class="controller-box">
         <div class="title-box">
           <h2>Table LED Control</h2>
         </div>
-        <div class="button-box">
-          <button class="on" onclick="table_led('on')">On</button>
-          <button class="off" onclick="table_led('off')">Off</button>
+        <div class="switch-box">
+          <label class="switch">
+            <input type="checkbox" onchange="table_led(this.checked ? 'on' : 'off')">
+            <span class="slider"></span>
+          </label>
         </div>
       </div>
+
+
+         <div class="controller-box">
+        <div class="title-box">
+          <h2>Hoperlör</h2>
+        </div>
+        <div class="switch-box">
+          <label class="switch">
+            <input type="checkbox" onchange="speaker(this.checked ? 'on' : 'off')">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+
     </div>
 
     <div id="notification" class="notification"></div>

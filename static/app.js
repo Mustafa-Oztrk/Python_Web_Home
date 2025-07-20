@@ -48,3 +48,19 @@ function table_led(state) {
       }, 2000);
     });
 }
+
+function speaker(state){
+  
+  fetch(`/speaker/${state}`)
+  .then((response) => response.json())
+  .then((data) => {
+    // bildirim göster
+    const notification = document.getElementById("notification");
+    notification.textContent = data.message;
+    notification.classList.add("show");
+    // 2 saniye sonra bildirim gizle
+    setTimeout(() =>{
+      notification.classList.remove("show");
+    }, 2000);
+  });
+}

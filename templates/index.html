@@ -7,6 +7,8 @@
   <title>My Home</title>
   <link rel="icon" href="../templates/icon.jpg">
   <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
 </head>
 
 <body>
@@ -14,6 +16,39 @@
     <div class="header">
       <h1>Welcome Home</h1>
     </div>
+    <!--Navigation info bar-->
+    <div class="banner">
+      <div class="heat-moisture info-box ">
+        <div class="heat  ">
+          <h2> Home Heat</h2>
+          <p id="heat-value">0 °C</p>
+        </div>
+        <div class="moisture">
+          <h2> Home Moisture</h2>
+          <p id="moisture-value">0 %</p>
+        </div>
+      </div>
+      <div class="date-time info-box" id="date-time-box">
+        <h2>Tarih : <p id="current-date"></p>
+        </h2>
+        <h2>Saat : <p id="current-time"></p>
+        </h2>
+      </div>
+
+
+      <div class="local-weather info-box">
+        <div class="heat ">
+          <h2> City Heat :   <p id="heat-value-local"> 0 °C</p></h2>
+         
+        </div>
+        <div class="moisture info ">
+          <h2> City Moisture : <p id="moisture-value-local">0 %</p></h2>
+         
+        </div>
+      </div>
+    </div>
+
+
     <div class="container">
       <!-- LED Control -->
       <div class="led-controller controller-box">
@@ -42,9 +77,9 @@
       </div>
 
 
-         <div class="controller-box">
+      <div class="controller-box">
         <div class="title-box">
-          <h2>Hoperlör</h2>
+          <h2>Speaker</h2>
         </div>
         <div class="switch-box">
           <label class="switch">
@@ -60,6 +95,8 @@
     <div id="notification" class="notification"></div>
   </div>
   <script src="../static/app.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+
 </body>
 
 </html>

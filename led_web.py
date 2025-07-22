@@ -15,14 +15,16 @@ PORT = 2003
 # GPIO pinlerini BCM modunda ayarla (Raspberry Pi pin numaralandırması)
 GPIO.setmode(GPIO.BCM)
 # LED için kullanılacak GPIO pini (18 numaralı pin)
-LED_PIN = 21
-LED_PIN2 = 20
-LED_PIN3 = 22
+LED_PIN = 5
+LED_PIN2 = 6
+LED_PIN3 = 13
+LED_PIN4 = 19
 
 # LED pinini çıkış (output) olarak yapılandır
 GPIO.setup(LED_PIN, GPIO.OUT)
 GPIO.setup(LED_PIN2, GPIO.OUT)
 GPIO.setup(LED_PIN3, GPIO.OUT)
+GPIO.setup(LED_PIN4, GPIO.OUT) 
 
 # Ana sayfa için rota tanımla ("/" adresine gelen istekler)
 @app.route('/')
